@@ -23,7 +23,11 @@ const Sidebar = () => (
         <div className="sidebar-route">
             <Switch>
                 <Route exact path="/home"><Home /> </Route>
+                <Route exact path="/resources"><Resources /></Route>
+                <Route exact path="/"><Home /></Route>
             </Switch>
         </div>
     </div>
 )
+
+export default Sidebar;
