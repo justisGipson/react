@@ -8,15 +8,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #222;
   height: 150px;
   padding: 20px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* font-size: calc(10px + 2vmin); */
-  color: white;
+  color: #ffffff;
 }
 
 .App-title {
@@ -27,28 +22,22 @@
   font-size: large;
 }
 
-/* .App-link {
-  color: #61dafb;
-} */
-
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
+/* body */
 
 body {
   padding: 15px;
-  background-color: white;
+  background-color: #ffffff;
   font: Belleza;
 }
 
+/* footer */
 footer {
-  background-color: #53565A;
-  color: white;
+  background-color: #53565A; 
+  color: #ffffff;
   margin-top: 10px;
 }
 
@@ -56,59 +45,62 @@ footer  p {
   margin-top: 0.8em!important;
   margin-left: 1.5em;
 }
-
+/* main */
 .main {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
   height: 100%;
   min-height: 100%;
 }
-​
+
 .mainDiv {
   margin: auto;
   width: 90%;
   padding: 5px;
 }
-​
+
 .sidebar {
   display: flex;
   background-color: #53565A; 
   margin-top: 10px;
 }
-​
+
 ul {
   list-style-type: 'none';
 }
-
+/* Sidebar */
 .sidebar-list-styling{
-  padding-left: 50px;
-  padding-top: 15px;
+  padding-left: 30px;
+  padding-top: 25px;
   width: 20%;
   background-color: #53565A;
-  color: white;
+  color: #ffffff;
+  text-decoration: none;
 }
-​
+
 .sidebar-list a{
-  color: white;
+  color: #ffffff;
   padding: 0;
+  
 }
-​
+
 .sidebar-route{ 
   flex: 1;
   padding: '00px'; 
 }
-​
+
+/* header */
 .header {
   margin-top: 0.5em!important;
   text-align: center;
   background-color: #53565A; 
-  color: white;
+  color: #ffffff;
 }
-​
+
 .header a {
-  color: white;
+  color: #ffffff;
 }
-​
+
 .header  p {
   margin-top: 0.8em!important;
 }

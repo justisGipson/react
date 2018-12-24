@@ -22,10 +22,11 @@ const Resources = () => {
                     <li>https://github.com/ngokevin/aframe-react-boilerplate</li>
                 </ul>
                 <h1>More Reading</h1>
-                <p>We didn't really use these, but here are a few extra resources to help:
-                    <ul>Extra</ul>
+                <p>We didn't really use these, but here are a few extra resources to help:</p>
+                <ul>
+                    <li>Extra</li>
                     <li>The Moviee App</li>
-                </p>
+                </ul>
             </div>
         </div>
     );
