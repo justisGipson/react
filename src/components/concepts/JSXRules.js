@@ -1,4 +1,5 @@
 import React from 'react';
+import JSXCompiler from '../JSXComplier';
 
 
 const JSXRules = () => {
@@ -14,6 +15,9 @@ const JSXRules = () => {
                     <dt>JSX is not required</dt>
                     <dd>You can write your return in vanilla JS, most most sane people will use JSX.</dd>
                 </dl>
+                <hr />
+                <h1>Egghead.io's JSX Compiler</h1>
+                <JSXCompiler />
             </div>
         </div>
     );
