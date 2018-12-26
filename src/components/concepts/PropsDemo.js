@@ -1,4 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+const propsFromOutside = [
+    {string: 'Color Toggle', function: 'colorToggle'},
+    {string: 'Background Color Toggle', function: 'backgroundColorToggle'},
+    {string: 'Border Radius Toggle', function: 'borderRadiusToggle'},
+    {string: 'Border Style Toggle', function: 'borderStyleToggle'}
+]
 
 export default class PropsDemo extends React.Component {
     constructor(){
@@ -39,14 +47,16 @@ export default class PropsDemo extends React.Component {
     }
 
     render() {
+        const display = propsFromOutside.map((el, index) => {
+            return(
+                <FunctionalComp key={index} string={el.string} function={this[`${el.function}`]}/>
+            )
+        })
         return (
             <div className='main'>
                 <div className='mainDiv'>
                     <div style={this.state}>
-                        <FunctionalComp string='Color Toggle' function={this.colorToggle}/>
-                        <FunctionalComp string='Background Color Toggle' function={this.backgroundColorToggle}/>
-                        <FunctionalComp string='Border Radius Toggle' function={this.borderRadiusToggle}/>
-                        <FunctionalComp string='Border Style Toggle' function={this.borderStyleToggle}/>
+                        {display}
                     </div>
                 </div>
             </div>
@@ -61,4 +71,9 @@ const FunctionalComp = (props) => {
             <button onClick={props.function}>Press Me!</button>
         </div>
     )
+}
+
+FunctionalComp.defaultProps = {
+    string: 'this thang is nuts!',
+    function:  () => console.log('prop types are nuts')
 }
