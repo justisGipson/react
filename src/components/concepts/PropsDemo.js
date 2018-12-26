@@ -77,3 +77,8 @@ FunctionalComp.defaultProps = {
     string: 'this thang is nuts!',
     function:  () => console.log('prop types are nuts')
 }
+
+FunctionalComp.propTypes = {
+    string: PropTypes.string.isRequired,
+    function: PropTypes.func.isRequired
+}
