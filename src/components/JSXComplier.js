@@ -30,7 +30,7 @@ class JSXCompiler extends React.Component {
             <div>
                 <header className='compiler-header'>{this.state.err}</header>
                 <div className='compiler-container'>
-                    <pre>{this.state.ouput}</pre>
+                    <pre>{this.state.output}</pre>
                     <textarea
                         onChange={this.update.bind(this)}
                         defaultValue={this.state.input} />
