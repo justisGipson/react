@@ -22,7 +22,7 @@ const FunctionalComponentDemo = () => {
                         <dd>These are 'dumb' components for UI</dd>
                         <br />
                         <dt>return()</dt>
-                        <dd>Musty return a single element.</dd>
+                        <dd>Must return a single element.</dd>
                         <br />
                         <dt>Props are read only</dt>
                         <dd>Whether you declare a component as a function or a class, it must never modify it's own props.</dd>
