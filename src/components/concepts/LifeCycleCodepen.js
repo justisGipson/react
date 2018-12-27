@@ -6,8 +6,9 @@ const LifeCycleCodepen = () => {
             <div className='mainDiv'>
                 <h1 className='section-title'>Life Cycle Diagram</h1>
                 <hr />
+                <br />
                 <dl>
-                    <iframe height='510px' width = '100%' src="https://codepen.io/ccharris/details/wxdKYa"></iframe>
+                    <iframe title="lifecyclediagram" height='510px' width = '100%' src="https://codepen.io/ccharris/full/wxdKYa"></iframe>
                 </dl>
             </div>
         </div>
