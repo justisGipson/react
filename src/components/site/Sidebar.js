@@ -13,6 +13,7 @@ import JSXRules from '../concepts/JSXRules';
 import ClassComponentDemo from '../ClassComponentDemo';
 import PropsDemo from '../concepts/PropsDemo';
 import LifeCycleCodepen from '../concepts/LifeCycleCodepen';
+import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
 
 const Sidebar = () => (
     <div className="sidebar">
@@ -25,6 +26,7 @@ const Sidebar = () => (
                 <li><Link to="/classcomponent">Class Component</Link></li>
                 <li><Link to="/propsdemo">Props Demo</Link></li>
                 <li><Link to="/lifecyclediagram">Life Cycle Diagram</Link></li>
+                <li><Link to="/timer">Timers</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
 
             </ul>
@@ -37,8 +39,9 @@ const Sidebar = () => (
                 <Route exact path="/functionalcomponent"><FunctionalComponentDemo /></Route>
                 <Route exact path="/jsxrules"><JSXRules /></Route>
                 <Route exact path="/classcomponent"><ClassComponentDemo /></Route>
-                <Route exact path="/propsdemo"><PropsDemo/></Route>
-                <Route exact path="/lifecyclediagram"><LifeCycleCodepen/></Route>
+                <Route exact path="/propsdemo"><PropsDemo /></Route>
+                <Route exact path="/lifecyclediagram"><LifeCycleCodepen /></Route>
+                <Route exact path="/timer"><TimePiecesApp /></Route>
             </Switch>
         </div>
     </div>
