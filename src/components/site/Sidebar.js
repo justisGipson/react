@@ -14,6 +14,7 @@ import ClassComponentDemo from '../ClassComponentDemo';
 import PropsDemo from '../concepts/PropsDemo';
 import LifeCycleCodepen from '../concepts/LifeCycleCodepen';
 import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
+import ReactConceptsApp from '../apps/concept-list-app/ReactConceptsApp';
 
 const Sidebar = () => (
     <div className="sidebar">
@@ -27,6 +28,7 @@ const Sidebar = () => (
                 <li><Link to="/propsdemo">Props Demo</Link></li>
                 <li><Link to="/lifecyclediagram">Life Cycle Diagram</Link></li>
                 <li><Link to="/timer">Timers</Link></li>
+                <li><Link to="/reactconceptlist">React Concepts Checklist</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
 
             </ul>
@@ -42,6 +44,7 @@ const Sidebar = () => (
                 <Route exact path="/propsdemo"><PropsDemo /></Route>
                 <Route exact path="/lifecyclediagram"><LifeCycleCodepen /></Route>
                 <Route exact path="/timer"><TimePiecesApp /></Route>
+                <Route exact path="/reactconceptlist"><ReactConceptsApp /></Route>
             </Switch>
         </div>
     </div>

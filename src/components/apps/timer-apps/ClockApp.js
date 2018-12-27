@@ -34,6 +34,7 @@ export default class ClockApp extends Component {
                 <h1 className='section-title'>React Clock</h1>
                 <hr className='explanation' />
                 <p>Indianapolis: {this.state.time}</p>
+                {/* <p>London:</p> */}
             </div>
         );
     }
