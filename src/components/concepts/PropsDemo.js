@@ -7,7 +7,6 @@ const propsFromOutside = [
     {string: 'Border Radius Toggle', function: 'borderRadiusToggle'},
     {string: 'Border Style Toggle', function: 'borderStyleToggle'}
 ]
-
 export default class PropsDemo extends React.Component {
     constructor(){
         super();
@@ -27,19 +26,16 @@ export default class PropsDemo extends React.Component {
             color: this.state.color === 'white' ? 'red' : 'white'
         })
     }
-
     backgroundColorToggle = () => {
         this.setState({
             backgroundColor: this.state.backgroundColor === 'blue' ? 'green' : 'blue'
         })
     }
-
     borderRadiusToggle = () => {
         this.setState({
             borderRadius: this.state.borderRadius === '5px' ? '25px' : '5px'
         })
     }
-
     borderStyleToggle = () => {
         this.setState({
             borderStyle: this.state.borderStyle === 'dashed' ? 'solid' : 'dashed'
