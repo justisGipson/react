@@ -33,7 +33,7 @@ export default class ClockApp extends Component {
             <div>
                 <h1 className='section-title'>React Clock</h1>
                 <hr className='explanation' />
-                <p>{this.state.time}d</p>
+                <p>Indianapolis: {this.state.time}</p>
             </div>
         );
     }
