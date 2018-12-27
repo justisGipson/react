@@ -37,3 +37,21 @@ export const concepts = [
     }
 ]
 
+export const lifecycleMethods = [
+    {
+        text: 'componentDidMount',
+        done: false
+    },
+    {
+        text: 'componentDidUpdate',
+        done: false
+    },
+    {
+        text: 'componentWillUnmount',
+        done: false
+    },
+    {
+        text: 'render',
+        done: false
+    }
+]
