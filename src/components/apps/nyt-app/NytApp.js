@@ -68,7 +68,7 @@ export default class NytApp extends Component {
                         <input type='date' name='startDate' pattern='[0-9]{8}' onChange={this.handleChange} /><br />
                         <span>Enter an end date: </span>
                         <input type='date' name='endDate' pattern='[0-9]{8}' onChange={this.handleChange} /><br />
-                        <button className="submit">Submit search</button>
+                        <button className="submit">Submit</button>
                     </form>
                     {
                         this.state.results.length > 0 ? <NytResults results={this.state.results} changePage={this.changePageNumber} /> : <div></div>
