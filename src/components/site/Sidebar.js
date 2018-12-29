@@ -35,6 +35,7 @@ const Sidebar = () => (
 
             </ul>
         </div>
+        
         <div className="sidebar-route">
             <Switch>
                 <Route exact path="/home"><Home /> </Route>

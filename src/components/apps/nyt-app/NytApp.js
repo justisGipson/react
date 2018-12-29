@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NytResults from './NytResults';
+import NytResults from './NytResults'
 
 const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 const key = '7d212f4c1c5349d180c14a08a7f4e253';
@@ -57,11 +57,11 @@ export default class NytApp extends Component {
         }
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className='main'>
                 <div className='mainDiv'>
-                    <form onSubmit={e=> this.handleSubmit(e)}>
+                    <form onSubmit={e => this.handleSubmit(e)}>
                         <span>Enter a SINGLE search term (required): </span>
                         <input type='text' name='search' onChange={this.handleChange} required /><br />
                         <span>Enter a start date: </span>

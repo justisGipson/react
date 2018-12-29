@@ -7,7 +7,7 @@ const NytResults = (props) => {
                 return(
                     <div key={result._id}>
                         <h2>{result.headline.main}</h2>
-                        {result.multimedia.length > 1 ? <img alt='article' src={'http://www.nytimes.com/&{result.multimedia[1].url}'} /> : ''}
+                        {result.multimedia.length > 1 ? <img alt='article' src={`http://www.nytimes.com/${result.multimedia[1].url}`} /> : ''}
                         <p>
                             {result.snippet}
                             <br />
