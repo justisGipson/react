@@ -15,6 +15,7 @@ import PropsDemo from '../concepts/PropsDemo';
 import LifeCycleCodepen from '../concepts/LifeCycleCodepen';
 import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
 import ReactConceptsApp from '../apps/concept-list-app/ReactConceptsApp';
+import NytApp from '../apps/nyt-app/NytApp';
 
 const Sidebar = () => (
     <div className="sidebar">
@@ -29,6 +30,7 @@ const Sidebar = () => (
                 <li><Link to="/lifecyclediagram">Life Cycle Diagram</Link></li>
                 <li><Link to="/timer">Timers</Link></li>
                 <li><Link to="/reactconceptlist">React Concepts Checklist</Link></li>
+                <li><Link to="/nytapp">New York Times App</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
 
             </ul>
@@ -45,6 +47,7 @@ const Sidebar = () => (
                 <Route exact path="/lifecyclediagram"><LifeCycleCodepen /></Route>
                 <Route exact path="/timer"><TimePiecesApp /></Route>
                 <Route exact path="/reactconceptlist"><ReactConceptsApp /></Route>
+                <Route exact path="/nytapp"><NytApp /></Route>
             </Switch>
         </div>
     </div>
