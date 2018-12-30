@@ -17,6 +17,7 @@ import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
 import ReactConceptsApp from '../apps/concept-list-app/ReactConceptsApp';
 import FriendsApp from '../apps/friends-list-app/FriendsApp';
 import NytApp from '../apps/nyt-app/NytApp';
+import MovieSearchApp from '../apps/movie-search-app/MovieApp';
 
 const Sidebar = () => (
     <div className="sidebar">
@@ -33,6 +34,7 @@ const Sidebar = () => (
                 <li><Link to="/reactconceptlist">React Concepts Checklist</Link></li>
                 <li><Link to="/nytapp">New York Times App</Link></li>
                 <li><Link to='/friendslist'>Friends List App</Link></li>
+                <li><Link to='/movie'>Movie Search App</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
 
             </ul>
@@ -52,6 +54,7 @@ const Sidebar = () => (
                 <Route exact path="/reactconceptlist"><ReactConceptsApp /></Route>
                 <Route exact path="/friendslist"><FriendsApp /></Route>
                 <Route exact path="/nytapp"><NytApp /></Route>
+                <Route exact path="/movie"><MovieSearchApp /></Route>
             </Switch>
         </div>
     </div>

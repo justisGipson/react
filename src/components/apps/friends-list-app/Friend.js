@@ -8,10 +8,11 @@ const Friend = ({friend, removeFriend}) => {
                 <strong>Name:</strong> {friend.name}
                 <br />
                 <strong>Age:</strong> {friend.age}
+                <br />
                 <button onClick={(e) => {removeFriend(e, friend)}}
                     className='btn btn-danger trash'>
                     <span><FaTrashO /></span>
-                    </button>
+                </button>
             </li>
         </div>
     )
