@@ -13,7 +13,7 @@ export default class NytApp extends Component {
             startDate: '',
             endDate: '',
             pageNumber: 0,
-            result: []
+            results: []
         };
     }
 
