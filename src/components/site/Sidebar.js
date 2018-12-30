@@ -31,8 +31,8 @@ const Sidebar = () => (
                 <li><Link to="/lifecyclediagram">Life Cycle Diagram</Link></li>
                 <li><Link to="/timer">Timers</Link></li>
                 <li><Link to="/reactconceptlist">React Concepts Checklist</Link></li>
-                <li><Link to='/friendslist'>Friends List App</Link></li>
                 <li><Link to="/nytapp">New York Times App</Link></li>
+                <li><Link to='/friendslist'>Friends List App</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
 
             </ul>
