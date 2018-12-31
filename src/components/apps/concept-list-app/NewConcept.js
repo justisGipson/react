@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class NewConcept extends Component {
     create(event) {
         event.preventDefault();
-        let text = this.refs.newConceptText.nodeValue;
+        let text = this.refs.newConceptText.value;
         if(text) {
             this.props.createConcept(text);
             this.refs.newConceptText.value = '';

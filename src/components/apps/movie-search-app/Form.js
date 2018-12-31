@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 import FormResults from './FormResults';
+import styled from 'styled-components';
+
+const SearchInput = styled.input`
+    margin-top: 10px;
+    width: 250px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: gray;
+`;
 
 export class Form extends Component {
     constructor(props){
@@ -35,8 +44,8 @@ export class Form extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit} id='form'>
-                <input onKeyUp={this.handleKeyUp} id="searchInput" className='SearchBars' type='text' placeholder='Search a movie' required />
-                {this.UNSAFE_componentWillMount.state.results === [] ? (<div />) : (<FormResults results={this.state.results} />)}
+                <SearchInput onKeyUp={this.handleKeyUp} id="searchInput" className='SearchBars' type='text' placeholder='Search a movie' required />
+                <FormResults results={this.state.results} />
             </form>
         );
     }
