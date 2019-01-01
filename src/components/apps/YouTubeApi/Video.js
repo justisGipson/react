@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
-import SearchBar from './search-bar';
-import VideoDetail from './video-detail'
+import SearchBar from './SearchBar';
+import VideoDetail from './VideoDetail'
 
 const API_KEY = 'AIzaSyD5WIR66P9c8bwLz1vk8qPPBO6lyRp3u_s';
 
@@ -32,8 +32,8 @@ class Video extends Component {
         return (
             <div className='main'>
                 <div className='mainDiv'>
-                    <h1 className='section-title'>React Video Search</h1>
-                    <h3>Based on Stephen Grider's work on Udemy</h3>
+                    <h1 className='section-title'>YouTube Video Search</h1>
+                    <h3>Basic Video Search</h3>
 
                     <SearchBar onSearchTermChange={videoSearch} />
                     <VideoDetail video={this.state.selectedVideo} />
