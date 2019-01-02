@@ -19,6 +19,7 @@ import FriendsApp from '../apps/friends-list-app/FriendsApp';
 import NytApp from '../apps/nyt-app/NytApp';
 import MovieSearchApp from '../apps/movie-search-app/MovieApp';
 import Video from '../apps/YouTubeApi/Video';
+import Bitcoin from '../apps/bitcoin-api-app';
 
 const Sidebar = () => (
     <div className="sidebar">
@@ -37,6 +38,7 @@ const Sidebar = () => (
                 <li><Link to='/friendslist'>Friends List App</Link></li>
                 <li><Link to='/movie'>Movie Search App</Link></li>
                 <li><Link to='/video'>Youtube Video Search</Link></li>
+                <li><Link to ='/bitcoin'>30 Day Bitcoin Prices</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
 
             </ul>
@@ -58,6 +60,7 @@ const Sidebar = () => (
                 <Route exact path="/nytapp"><NytApp /></Route>
                 <Route exact path="/movie"><MovieSearchApp /></Route>
                 <Route exact path="/video"><Video /></Route>
+                <Route exact path="/bitcoin"><Bitcoin /></Route>
             </Switch>
         </div>
     </div>
