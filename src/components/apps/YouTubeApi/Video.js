@@ -34,7 +34,6 @@ class Video extends Component {
                 <div className='mainDiv'>
                     <h1 className='section-title'>YouTube Video Search</h1>
                     <h3>Basic Video Search</h3>
-
                     <SearchBar onSearchTermChange={videoSearch} />
                     <VideoDetail video={this.state.selectedVideo} />
                 </div>
