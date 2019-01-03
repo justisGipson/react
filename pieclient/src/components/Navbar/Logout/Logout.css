@@ -1,6 +1,4 @@
 #logout {
-    display: flex;
-    justify-content: right;
-    margin: 0;
-    float: right;
+    margin-left: 93%;
+    height: 100px;
 }

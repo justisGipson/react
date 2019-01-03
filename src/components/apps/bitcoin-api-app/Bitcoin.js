@@ -9,7 +9,6 @@ export default class Bitcoin extends Component {
             data: [],
         }
     }
-
     componentDidMount() {
         const url = 'https://api.coindesk.com/v1/bpi/historical/close.json';
         fetch(url)
@@ -25,13 +24,12 @@ export default class Bitcoin extends Component {
                 console.log(e);
             })
     }
-
     render(){
         return (
             <div className='main'>
                 <div className='mainDiv'>
                     <h1>30 Day Bitcoin Price Chart</h1>
-                    {!this.state.fetchingData ? <h3>Info Box</h3> : null}
+                    {!this.state.fetchingData ? <InfoBox data={this.state.data} /> : null}
                     {!this.state.fetchingData ? <LineChart data={this.state.data}/> : null}
                 </div>
             </div>

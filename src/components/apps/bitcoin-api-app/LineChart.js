@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Chart from 'chart.js';
 import moment from 'moment';
-
 export default class LineChart extends Component {
     constructor(props) {
         super(props);
@@ -22,9 +21,9 @@ export default class LineChart extends Component {
         this.setState({
             dates: dates,
             payout: payout
-        })
+        })  
     }
-    componentDidMount() {
+    componentDidUpdate() {
         var chartContext = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(chartContext, {
             type: 'line',
