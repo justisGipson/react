@@ -1,13 +1,38 @@
 import React,  {Component} from 'react';
-
+import LineChart from './LineChart';
+import InfoBox from './InfoBox';
 export default class Bitcoin extends Component {
+    constructor(){
+        super();
+        this.state = {
+            fetchingData: true,
+            data: [],
+        }
+    }
+
+    componentDidMount() {
+        const url = 'https://api.coindesk.com/v1/bpi/historical/close.json';
+        fetch(url)
+            .then(response => response.json())
+            .then(bitcoinData => {
+                console.log(bitcoinData.bpi);
+                this.setState({
+                    data: bitcoinData.bpi,
+                    fetchingData: false
+                })
+            })
+            .catch(e => {
+                console.log(e);
+            })
+    }
+
     render(){
         return (
             <div className='main'>
                 <div className='mainDiv'>
                     <h1>30 Day Bitcoin Price Chart</h1>
-                    <h3>Info Box</h3>
-                    <h3>Line Chart</h3>
+                    {!this.state.fetchingData ? <h3>Info Box</h3> : null}
+                    {!this.state.fetchingData ? <LineChart data={this.state.data}/> : null}
                 </div>
             </div>
         );

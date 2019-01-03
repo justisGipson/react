@@ -19,7 +19,7 @@ import FriendsApp from '../apps/friends-list-app/FriendsApp';
 import NytApp from '../apps/nyt-app/NytApp';
 import MovieSearchApp from '../apps/movie-search-app/MovieApp';
 import Video from '../apps/YouTubeApi/Video';
-import Bitcoin from '../apps/bitcoin-api-app';
+import Bitcoin from '../apps/bitcoin-api-app/Bitcoin';
 
 const Sidebar = () => (
     <div className="sidebar">
