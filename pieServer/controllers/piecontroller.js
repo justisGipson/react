@@ -1,13 +1,14 @@
 const router = require('express').Router();
 const Pie = require('../db').import('../models/pie');
+const validateSession = require('../middleware/validate-session');
 
-router.get('/', (req, res) => {
+router.get('/', validateSession, (req, res) => {
     Pie.findAll()
         .then(pie => res.status(200).json(pie))
         .catch(err => res.status(500).json({error: err}))
 });
 
-router.post('/', (req, res) => {
+router.post('/', validateSession, (req, res) => {
     if(!req.errors) {
         const pieFromRequest = {
             nameOfPie: req.body.nameOfPie,
