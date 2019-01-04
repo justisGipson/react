@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Auth.css';
 
 class Auth extends Component {
+    // class values
     state = {
         login: true,
         firstName: '',
@@ -9,7 +10,7 @@ class Auth extends Component {
         email: '',
         password: ''
     }
-
+    // method that updates states based on input
     handleChange = (event) => {
         this.setState({[event.target.id] : event.target.value})
     }
@@ -17,7 +18,7 @@ class Auth extends Component {
     handleSubmit = () => {
 
     }
-
+    // prevents page refesh, clears input fields, toggles the login
     loginToggle = (event) => {
         event.preventDefault();
         const login = this.state.login;
@@ -31,7 +32,9 @@ class Auth extends Component {
     }
 
     render(){
+        // showing login or sign up based on this.state.login boolean
         let title = this.state.login ? "Login" : "Sign-up";
+        // if this.state.login is true show nothing extra, else show first and last names
         let signupFields = this.state.login
             ? null : (
                 <div>
