@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const User = require('../db').import('../models/user');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 router.post('/signup', (req, res) => {
     User.create({
@@ -10,7 +12,7 @@ router.post('/signup', (req, res) => {
     })
       .then(
         createSuccess = (user) => {
-          let token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: 60 * 60 * 24 })
+          let token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: 60 * 60 * 24 });
             
           res.json({
             user: user,
@@ -18,7 +20,7 @@ router.post('/signup', (req, res) => {
             sessionToken: token
           })
         },
-        createError = err => res.send(500, err)
+        createError = err => res.status(500).json({error: err})
    )
 })
 
