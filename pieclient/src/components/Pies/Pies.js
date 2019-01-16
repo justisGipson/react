@@ -4,35 +4,23 @@ import Pie from './Pie/Pie';
 import './Pies.css';
 
 class Pies extends Component {
-  testData = [
-    {
-      nameOfPie: 'Name of Pie',
-      baseOfPie: 'Base of Pie',
-      crust: 'Crust',
-      timeToBake: 'Time to Bake',
-      servings: 'Servings',
-      rating: 'Rating'
-    },
-    {
-      nameOfPie: 'Cherry',
-      baseOfPie: 'Fruit Filling',
-      crust: 'Pastry',
-      timeToBake: '30 mins',
-      servings: 97,
-      rating: '5 stars'
-    }, 
-    {
-      nameOfPie: 'Pecan',
-      baseOfPie: 'Sugary Goodness',
-      crust: 'Graham Cracker',
-      timeToBake: '40 mins',
-      servings: 2,
-      rating: '3 stars'
-    }
-  ]
+  state = {
+    pies: []
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:3000/pies', {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(json => this.setState({pies: json}))
+  }
 
   render(){
-    let pieRows = this.testData.map(pie => {
+    let pieRows = this.state.pies.map(pie => {
       return(
         <Pie pie={pie}/>
       )
@@ -40,6 +28,24 @@ class Pies extends Component {
     return(
       <table>
         <tbody>
+        <th>
+          <td>Pie Name</td>
+        </th>
+        <th>
+          <td>Filling</td>
+        </th>
+        <th>
+          <td>Crust</td>
+        </th>
+        <th>
+          <td>Time to Bake</td>
+        </th>
+        <th>
+          <td>Servings</td>
+        </th>
+        <th>
+          <td>Rating</td>
+        </th>
           {pieRows}
         </tbody>
       </table>
