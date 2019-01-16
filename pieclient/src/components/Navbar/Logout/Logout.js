@@ -1,11 +1,12 @@
 import React from 'react';
+
 import './Logout.css';
-import logout from '../../../assets/logout.jpg';
+import logoutPic from '../../../assets/logout.png';
 
 const Logout = (props) => {
-    return(
-        <img className='logout' src={logout} alt='bye' onClick={props.logout} />
-    )
+  return(
+    <img className="Logout" src={logoutPic} alt="Logout" onClick={props.logout}/>
+  )
 }
 
 export default Logout;
