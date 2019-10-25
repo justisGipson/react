@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FormResults from './FormResults';
 import styled from 'styled-components';
 
-import API_KEY from '.env
+import API_KEY from '.env';
 
 const SearchInput = styled.input`
     margin-top: 10px;
