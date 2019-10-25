@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import FormResults from './FormResults';
 import styled from 'styled-components';
 
+import API_KEY from '.env
+
 const SearchInput = styled.input`
     margin-top: 10px;
     width: 250px;
@@ -23,7 +25,7 @@ export class Form extends Component {
     }
 
     handleKeyUp = (e) => {
-        const key = '495f584fe237cfd3528d4d8f8b99f371';
+        const key = API_KEY;
 
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en_US&query=${e.target.value}&page=1&include_adult=false`)
             .then(response => {
