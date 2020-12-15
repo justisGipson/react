@@ -6,7 +6,7 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.2.1",
     "chart.js": "^2.7.3",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "moment": "^2.23.0",
     "react": "^16.7.0",
     "react-codepen": "^0.1.0",
